@@ -1,0 +1,29 @@
+<form id="contact-form" class="contact-us">
+    <input type="text" id="name" placeholder="Nombre">
+    <input type="email" id="email" placeholder="Email">
+    <textarea id="message" placeholder="Mensaje"></textarea>
+    <button type="submit">Enviar</button>
+</form>
+
+<!-- Tu script JS -->
+<script>
+    // Abre/cierra el menú de navegación y desplazamiento suave
+    // ... (tu código JS actual) ...
+
+    // Validación del formulario de contacto
+    const contactForm = document.getElementById('contact-form');
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+        const name = document.getElementById('name').value.trim();
+        const email = document.getElementById('email').value.trim();
+        const message = document.getElementById('message').value.trim();
+
+        if (name === '' || email === '' || message === '') {
+            alert('Por favor completa todos los campos.');
+        } else {
+            // Aquí podrías enviar el formulario a través de AJAX o realizar alguna acción adicional
+            alert('¡Formulario enviado correctamente!');
+            // contactForm.submit(); // Envío del formulario (habilitar si se desea enviar realmente)
+        }
+    });
+</script>

@@ -5,8 +5,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+<style>
+    body{
+       text-align: center;
+    }
+    form{
+        justify-content: center;
+    }
+    
+</style>
 <body>
     <h1>Operaciones matematicas</h1>
     <script src="js/myjs.js"></script>
+
+    <form action="">
+        <table border="1">
+            <tr>
+                <td>Valor 1 <input type="number" name="a" id="a"></td>
+            </tr>
+            <tr>
+                <td>Valor 2 <input type="number" name="b" id="b"></td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="button" value="calcular" onclick="calcular();">
+                </td>
+            </tr>
+            
+        </table>
+        
+    </form>
+    <script>
+        function calcular(){
+            var num1 = parseInt(document.getElementById('a').value);
+            var num2 = parseInt(document.getElementById('b').value);
+            var suma = num1 + num2;
+            alert('La suma es: '+suma);
+        }
+    </script>
 </body>
 </html>
